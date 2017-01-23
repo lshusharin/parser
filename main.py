@@ -8,4 +8,5 @@ if __name__ == "__main__":
 
     p = Parser(file_r)
     p.read_file()
-    p.parse_file()
+    jsoned = p.parse_file()
+    print jsoned

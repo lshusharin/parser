@@ -16,8 +16,9 @@ class Parser(object):
         print type(self.text)
 
         vals = re.findall(r'(\b\d{3}) \S+=(\d+\b)', self.text)
-        print vals
+        # print vals, '\n'
         packed = {}
-        # for i, j in enumerate(ids):
-        #     packed[j] = vals[i].replace('=', '')
-        # print packed
+        for each in vals:
+            packed[each[0]] = each[1]
+        jsoned = json.dumps(packed)
+        return jsoned
